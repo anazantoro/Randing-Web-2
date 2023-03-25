@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,15 +13,15 @@
             <a href="#"><img src="img/rm (1).png" class="logo" alt=""></a>
             <div>
                 <ul id="navbar">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a class="active" href="contact.html">Contact</a></li>
-                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="Message.html">Message</a></li>
                 </ul>
             </div>
         </section>
 
-        <section id="page-header" style="background-image: url(/img/banner/b1.jpg);">
+        <section id="page-header" style="background-image: url(img/banner/b1.jpg);">
             <h2>#Need Us?</h2>
             <p>Ask anything to us!</p>
         </section>
@@ -60,18 +60,40 @@
         </section>
 
         <section id="form-contact">
-            <form action="">
+            <form id="myForm">
                 <span>Leave A Message</span>
                 <h2>We Would Like To Hear From You</h2>
-                <input type="text" placeholder="Your Name" 
+                <input type="text" placeholder="Your Name" name="name"
                 required>
-                <input type="text" placeholder="Email"
+                <input type="text" placeholder="Email" name="email"
                 required>
-                <input type="text" placeholder="Subject"
+                <input type="text" placeholder="Subject" name="subject"
                 required>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"
+                <div class="checkb">
+                    <input type="checkbox" id="checkbox" value="exp" name="exp">
+                    <label for="checkbox"> I'm Experienced</label>
+                    <input type="checkbox" id="checkbox" value="new" name="new">
+                    <label for="checkbox"> I'm New</label><br>
+                </div>
+                <div class="rdo">
+                    <input type="radio" id="r1" name="gender" value="Male">
+                    <label for="html" style="margin-right: 15px;"> Male</label><br>
+                    <input type="radio" id="r2" name="gender" value="Female">
+                    <label for="css"> Female</label><br>
+                </div>
+                <div class="slt">
+                    <label for="cars">What Are You ? :</label>
+                
+                    <select name="option">
+                        <option value="artmaker">Art Maker</option>
+                        <option value="artview">Art Viewer</option>
+                        <option value="artanalyst">Art Analyst</option>
+                        <option value="interest">Just Interested!</option>
+                    </select>
+                </div>
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"
                 required></textarea>
-                <button class="normal">Submit</button>
+                <button class="normal" type="submit">Submit</button>
             </form>
 
             <div class="ppl-contact">
@@ -89,6 +111,22 @@
                 </div>
             </div>
         </section>
+        <script>
+            document.getElementById("myForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                // Get the form data
+                const formData = new FormData(this);
+                const data = {};
+                formData.forEach((value, key) => (data[key] = value));
+
+                // Store the form data in session storage
+                sessionStorage.setItem("formData", JSON.stringify(data));
+
+                // Navigate to the new HTML page
+                window.location.href = "Message.html";
+            });
+        </script>
     </body>
 </html>
  

@@ -130,12 +130,12 @@ body {
 /*Hero Section Style*/
 
 #hero {
-    background-image: url(img/products/1716px-Raden_Saleh_-_Diponegoro_arrest.jpg);
+    background-image: url(../img/products/1716px-Raden_Saleh_-_Diponegoro_arrest.jpg);
     height: 90vh;
     width: 100%;
     background-size: cover;
     background-position: top 25% right 0;
-    padding: 0 80px;
+    padding: 0px 50px 150px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -150,6 +150,15 @@ body {
 #hero h2 , #hero p{
   color: whitesmoke;
   opacity: 90%;
+}
+
+#intro {
+  color: #000000f4;
+  font-family: "Spartan", sans-serif;
+  font-size: 40px;
+  margin: 40px 0px 0px 0px;
+  padding: 0px 0px 270px 0px;
+  font-style: bold;
 }
 
 /*Product Style*/
@@ -219,7 +228,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(/img/banner/b2.jpg);
+  background-image: url(../img/banner/b2.jpg);
   width: 100%;
   height: 40vh;
   background-size: cover;
@@ -257,7 +266,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url(/img/banner/doors_lockers_retro_120760_800x600.jpg);
+  background-image: url(../img/banner/doors_lockers_retro_120760_800x600.jpg);
   min-width: 600px;
   height: 50vh;
   background-size: cover;
@@ -267,7 +276,7 @@ body {
 }
 
 #home-categories .categories-box2 {
-  background-image: url(/img/banner/rose_flower_white_143143_800x600.jpg);
+  background-image: url(../img/banner/rose_flower_white_143143_800x600.jpg);
 }
 
 #home-categories h4 {
@@ -306,7 +315,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url(/img/banner/stars_sky_space_car_113629_800x600.jpg);
+  background-image: url(../img/banner/stars_sky_space_car_113629_800x600.jpg);
   min-width: 30%;
   height: 30vh;
   background-size: cover;
@@ -316,11 +325,11 @@ body {
 }
 
 #categories-tag .categories-box2 {
-  background-image: url(/img/banner/artist_waves_colorful_129158_800x600.jpg);
+  background-image: url(../img/banner/artist_waves_colorful_129158_800x600.jpg);
 }
 
 #categories-tag .categories-box3 {
-  background-image: url(/img/banner/observatory_observer_starry_sky_130777_800x600.jpg);
+  background-image: url(../img/banner/observatory_observer_starry_sky_130777_800x600.jpg);
 }
 
 #categories-tag h2 {
@@ -355,7 +364,7 @@ body {
 }
 
 #page-header {
-  background-image: url(/img/about/banner.png);
+  background-image: url(../img/about/banner.png);
   width: 100%;
   height: 40vh;
   background-size: cover;
@@ -473,6 +482,30 @@ body {
   align-items: flex-start;
 }
 
+#form-contact .checkb {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 15px 0px 25px 0px;
+
+}
+
+#form-contact .rdo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 15px 15px 15px 15px;
+  margin-right: 10px;
+}
+
+#form-contact .rdo input {
+  margin-right: 10px;
+}
+
+#form-contact .slt {
+  padding: 15px 0px 25px 15px;
+}
+
 #form-contact form input,
 #form-contact form textarea {
   width: 100%;
@@ -492,6 +525,7 @@ body {
   display: flex;
   align-items: flex-start;
 }
+
 
 #form-contact .ppl-contact img {
   width: 65px;

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Painting Website</title>
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="Message.html">Message</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="page-header">
+        <h2>#Become our newest member!</h2>
+        <p>Get to know closer to our company!</p>
+    </section>
+
+    <section class="regis-container">
+        <h1>Form Data</h1>
+        <div class="container2" id="message">
+            <p>Name: <span id="name"></span></p>
+            <p>Email: <span id="email"></span></p>
+            <p>Subject: <span id="subject"></span></p>
+            <p>Experience level: <span id="experience"></span></p>
+            <p>Gender: <span id="gender"></span></p>
+            <p>Option: <span id="option"></span></p>
+            <p>Message: <span id="message"></span></p>
+        </div>
+    </section>
+
+    <footer class="card">
+        <div class="container">
+            <img src="/img/logo.png" alt="">
+            <p><strong>Offline Address : </strong>Jln. Jakarta, Blok CB, Samarinda</p>
+            <p><strong>Contact Phone : </strong>+6285250901586</p>
+            <p><strong>Working Hours : </strong>09:00 - 22:00 <strong>Everyday</strong></p>
+        </div>
+    </footer>
+    <script>
+        window.onload = function (e) {
+            const storedData = JSON.parse(sessionStorage.getItem("formData"));
+            if (storedData) {
+                // Display the form data on the new HTML page
+                document.getElementById("message").innerHTML = `
+                    <p>Name: ${storedData["name"]}</p>
+                    <p>Email: ${storedData["email"]}</p>
+                    <p>Subject: ${storedData["subject"]}</p>
+                    <p>Experience: ${(storedData["exp"]) ? "Experience" : "Fresh Graduate"}</p>
+                    <p>Gender: ${storedData["gender"]}</p>
+                    <p>Option: ${storedData["option"]}</p>
+                    <p>Message: ${storedData["message"]}</p>
+                `;
+            }
+        }
+    </script>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
